@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +8,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ─── DARK THEME (default) ─── */
-:root, [data-theme="dark"] {
-  --bg: #09090B;
-  --bg-raised: #111113;
-  --bg-card: #16161A;
-  --bg-card-hover: #1C1C21;
-  --text: #EDEDEF;
-  --text-secondary: #B0AFB5;
-  --text-muted: #6E6D73;
+/* ─── DARK THEME ─── */
+[data-theme="dark"] {
+  --bg: #131316;
+  --bg-raised: #1A1A1E;
+  --bg-card: #1E1E23;
+  --bg-card-hover: #252529;
+  --text: #FFFFFF;
+  --text-secondary: #F0EDE8;
+  --text-muted: #DDD8D2;
   --accent: #D4A574;
   --accent-light: #E8C9A8;
   --accent-dark: #B8864E;
   --accent-glow: rgba(212, 165, 116, 0.08);
   --accent-glow-strong: rgba(212, 165, 116, 0.15);
-  --border: #1F1F23;
-  --border-light: #2A2A30;
-  --border-hover: #3A3A42;
+  --border: #2A2A30;
+  --border-light: #333339;
+  --border-hover: #44444D;
   --heading: 'Playfair Display', Georgia, serif;
   --sans: 'Inter', system-ui, sans-serif;
   --mono: 'JetBrains Mono', monospace;
@@ -36,12 +36,12 @@
   --shadow-lg: 0 12px 40px rgba(0,0,0,0.4), 0 4px 12px rgba(0,0,0,0.2);
   --shadow-glow: 0 0 30px rgba(212,165,116,0.08);
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
-  --nav-bg: rgba(9,9,11,0.75);
+  --nav-bg: rgba(19,19,22,0.8);
   --nav-scrolled-shadow: 0 1px 12px rgba(0,0,0,0.3);
   --selection-color: var(--bg);
   --btn-primary-text: var(--bg);
   --btn-secondary-hover-bg: rgba(255,255,255,0.03);
-  --mobile-nav-bg: rgba(9,9,11,0.97);
+  --mobile-nav-bg: rgba(19,19,22,0.97);
   --grain-opacity: 0.03;
   --orb-1: rgba(212,165,116,0.1);
   --orb-2: rgba(212,165,116,0.06);
@@ -56,25 +56,69 @@
   --bg-earth: linear-gradient(135deg, #1A1714 0%, #121110 100%);
   --bg-rose: linear-gradient(135deg, #251518 0%, #1A1012 100%);
   --bg-indigo: linear-gradient(135deg, #151825 0%, #101218 100%);
+
+  /* Card body tints — dark */
+  --card-warm: #2A2012;
+  --card-warm-border: rgba(212, 165, 116, 0.35);
+  --card-cool: #122230;
+  --card-cool-border: rgba(80, 170, 240, 0.3);
+  --card-muted: #222218;
+  --card-muted-border: rgba(180, 180, 140, 0.25);
+  --card-earth: #282012;
+  --card-earth-border: rgba(200, 160, 90, 0.3);
+  --card-rose: #2E1420;
+  --card-rose-border: rgba(240, 100, 150, 0.3);
+  --card-indigo: #1A1E30;
+  --card-indigo-border: rgba(120, 130, 240, 0.3);
+
+  /* Tag colors — dark theme */
+  --tag-casestudy: #F0A050;
+  --tag-casestudy-bg: rgba(240, 160, 80, 0.12);
+  --tag-casestudy-border: rgba(240, 160, 80, 0.25);
+  --tag-financial: #5EC7A0;
+  --tag-financial-bg: rgba(94, 199, 160, 0.1);
+  --tag-financial-border: rgba(94, 199, 160, 0.22);
+  --tag-product: #E87DAD;
+  --tag-product-bg: rgba(232, 125, 173, 0.1);
+  --tag-product-border: rgba(232, 125, 173, 0.22);
+  --tag-market: #6BAFFF;
+  --tag-market-bg: rgba(107, 175, 255, 0.1);
+  --tag-market-border: rgba(107, 175, 255, 0.22);
+  --tag-strategy: #A78BFA;
+  --tag-strategy-bg: rgba(167, 139, 250, 0.1);
+  --tag-strategy-border: rgba(167, 139, 250, 0.22);
+  --tag-competitive: #60D0E0;
+  --tag-competitive-bg: rgba(96, 208, 224, 0.1);
+  --tag-competitive-border: rgba(96, 208, 224, 0.22);
+  --tag-consumer: #FFB86C;
+  --tag-consumer-bg: rgba(255, 184, 108, 0.1);
+  --tag-consumer-border: rgba(255, 184, 108, 0.22);
+  --tag-guesstimate: #C5E868;
+  --tag-guesstimate-bg: rgba(197, 232, 104, 0.1);
+  --tag-guesstimate-border: rgba(197, 232, 104, 0.22);
+  --tag-sustainability: #4EDBA0;
+  --tag-sustainability-bg: rgba(78, 219, 160, 0.1);
+  --tag-sustainability-border: rgba(78, 219, 160, 0.22);
+  --tag-text: #C8D8F0;
 }
 
-/* ─── LIGHT THEME ─── */
-[data-theme="light"] {
-  --bg: #FAFAF6;
-  --bg-raised: #F5F0E8;
-  --bg-card: #FFFFFF;
-  --bg-card-hover: #FDFCF9;
-  --text: #1C1917;
-  --text-secondary: #57534E;
-  --text-muted: #A8A29E;
+/* ─── LIGHT THEME (default) ─── */
+:root:not([data-theme="dark"]), [data-theme="light"] {
+  --bg: #EEECEA;
+  --bg-raised: #E6E2DA;
+  --bg-card: #F5F3F0;
+  --bg-card-hover: #F0EEEB;
+  --text: #111110;
+  --text-secondary: #2A2725;
+  --text-muted: #6B6560;
   --accent: #C75B3A;
   --accent-light: #E8845F;
   --accent-dark: #A14428;
   --accent-glow: rgba(199, 91, 58, 0.08);
   --accent-glow-strong: rgba(199, 91, 58, 0.15);
-  --border: #E7E5E4;
-  --border-light: #F0EEEC;
-  --border-hover: #D6D3D1;
+  --border: #DAD7D4;
+  --border-light: #E2DFDC;
+  --border-hover: #C8C4C0;
   --heading: 'Bricolage Grotesque', system-ui, sans-serif;
   --sans: 'DM Sans', system-ui, sans-serif;
   --mono: 'IBM Plex Mono', monospace;
@@ -86,12 +130,12 @@
   --shadow-lg: 0 12px 40px rgba(28,25,23,0.08), 0 4px 12px rgba(28,25,23,0.04);
   --shadow-glow: none;
   --transition: cubic-bezier(0.16, 1, 0.3, 1);
-  --nav-bg: rgba(250,250,246,0.85);
+  --nav-bg: rgba(238,236,234,0.85);
   --nav-scrolled-shadow: 0 1px 8px rgba(28,25,23,0.04);
   --selection-color: #fff;
   --btn-primary-text: #fff;
   --btn-secondary-hover-bg: rgba(28,25,23,0.03);
-  --mobile-nav-bg: rgba(250,250,246,0.97);
+  --mobile-nav-bg: rgba(238,236,234,0.97);
   --grain-opacity: 0.025;
   --orb-1: rgba(199,91,58,0.06);
   --orb-2: rgba(199,91,58,0.04);
@@ -106,10 +150,54 @@
   --bg-earth: linear-gradient(135deg, #EDE8E0 0%, #E5DFD5 100%);
   --bg-rose: linear-gradient(135deg, #F2E8EA 0%, #ECE0E3 100%);
   --bg-indigo: linear-gradient(135deg, #E8EAF2 0%, #E0E2EC 100%);
+
+  /* Card body tints — light */
+  --card-warm: #F5EBDB;
+  --card-warm-border: rgba(181, 112, 10, 0.22);
+  --card-cool: #E0ECF6;
+  --card-cool-border: rgba(29, 111, 194, 0.2);
+  --card-muted: #EBEAE2;
+  --card-muted-border: rgba(120, 120, 100, 0.2);
+  --card-earth: #F0E6D6;
+  --card-earth-border: rgba(160, 120, 60, 0.22);
+  --card-rose: #F4E2E8;
+  --card-rose-border: rgba(190, 45, 106, 0.2);
+  --card-indigo: #E2E3F4;
+  --card-indigo-border: rgba(109, 77, 199, 0.2);
+
+  /* Tag colors — light theme */
+  --tag-casestudy: #B5700A;
+  --tag-casestudy-bg: rgba(181, 112, 10, 0.1);
+  --tag-casestudy-border: rgba(181, 112, 10, 0.25);
+  --tag-financial: #0E7B53;
+  --tag-financial-bg: rgba(14, 123, 83, 0.08);
+  --tag-financial-border: rgba(14, 123, 83, 0.22);
+  --tag-product: #BE2D6A;
+  --tag-product-bg: rgba(190, 45, 106, 0.08);
+  --tag-product-border: rgba(190, 45, 106, 0.22);
+  --tag-market: #1D6FC2;
+  --tag-market-bg: rgba(29, 111, 194, 0.08);
+  --tag-market-border: rgba(29, 111, 194, 0.22);
+  --tag-strategy: #6D4DC7;
+  --tag-strategy-bg: rgba(109, 77, 199, 0.08);
+  --tag-strategy-border: rgba(109, 77, 199, 0.22);
+  --tag-competitive: #0E7F8F;
+  --tag-competitive-bg: rgba(14, 127, 143, 0.08);
+  --tag-competitive-border: rgba(14, 127, 143, 0.22);
+  --tag-consumer: #B86A10;
+  --tag-consumer-bg: rgba(184, 106, 16, 0.08);
+  --tag-consumer-border: rgba(184, 106, 16, 0.22);
+  --tag-guesstimate: #5A7A10;
+  --tag-guesstimate-bg: rgba(90, 122, 16, 0.08);
+  --tag-guesstimate-border: rgba(90, 122, 16, 0.22);
+  --tag-sustainability: #0E8F5A;
+  --tag-sustainability-bg: rgba(14, 143, 90, 0.08);
+  --tag-sustainability-border: rgba(14, 143, 90, 0.22);
+  --tag-text: #1A3A5C;
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; font-size: 80%; }
 
 body {
   font-family: var(--sans);
@@ -143,7 +231,7 @@ body::after {
   border: 1.5px solid var(--border);
   border-radius: var(--radius-xs);
   cursor: pointer;
-  padding: 0.45rem 0.55rem;
+  padding: 0.55rem 0.65rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,10 +258,10 @@ body::after {
 
 .theme-toggle:hover svg { transform: rotate(30deg); }
 
-.theme-toggle .icon-moon { display: block; }
-.theme-toggle .icon-sun { display: none; }
-[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
-[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+.theme-toggle .icon-moon { display: none; }
+.theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
 
 /* ─── NAVIGATION ─── */
 nav {
@@ -181,7 +269,7 @@ nav {
   top: 0; left: 0; right: 0;
   z-index: 100;
   padding: 0 3rem;
-  height: 72px;
+  height: 88px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -202,7 +290,7 @@ nav.scrolled {
 
 .nav-logo {
   font-family: var(--heading);
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   font-weight: 700;
   color: var(--text);
   text-decoration: none;
@@ -216,7 +304,7 @@ nav.scrolled {
 nav ul { display: flex; list-style: none; gap: 2.25rem; }
 
 nav ul a {
-  font-size: 0.78rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -267,16 +355,16 @@ nav ul a.active::after { width: 100%; }
 .hamburger.active span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
 
 /* ─── LAYOUT ─── */
-.container { max-width: 1200px; margin: 0 auto; }
+.container { max-width: 1600px; margin: 0 auto; }
 
 section {
   padding: 6rem 4rem;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 .divider {
-  max-width: 1120px;
+  max-width: 1520px;
   margin: 0 auto;
   height: 1px;
   background: var(--divider-bg);
@@ -284,7 +372,7 @@ section {
 
 .section-label {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--accent);
   letter-spacing: 0.2em;
@@ -305,7 +393,7 @@ section {
 
 .section-title {
   font-family: var(--heading);
-  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-size: clamp(2.3rem, 4vw, 3.7rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
   line-height: 1.15;
@@ -316,18 +404,18 @@ section {
 .section-desc {
   color: var(--text-muted);
   max-width: 560px;
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin-bottom: 3rem;
   line-height: 1.75;
 }
 
 /* ─── HERO ─── */
 .hero {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  padding: calc(72px + 2.5rem) 4rem 4rem;
+  padding: calc(88px + 2.5rem) 4rem 4rem;
   position: relative;
   overflow: hidden;
 }
@@ -366,7 +454,7 @@ section {
 
 .hero-topline {
   font-family: var(--mono);
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--accent);
   letter-spacing: 0.2em;
@@ -378,7 +466,7 @@ section {
 
 .hero h1 {
   font-family: var(--heading);
-  font-size: clamp(3.2rem, 7vw, 6.5rem);
+  font-size: clamp(3.7rem, 8vw, 7.5rem);
   font-weight: 800;
   line-height: 1.02;
   letter-spacing: -0.03em;
@@ -405,7 +493,7 @@ section {
 
 .hero-oneliner {
   font-family: var(--heading);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-style: italic;
   color: var(--accent);
   margin-bottom: 3rem;
@@ -426,7 +514,7 @@ section {
   align-items: center;
   gap: 0.5rem;
   font-family: var(--sans);
-  font-size: 0.88rem;
+  font-size: 1.25rem;
   font-weight: 600;
   padding: 0.9rem 2rem;
   text-decoration: none;
@@ -466,7 +554,7 @@ section {
   align-items: center;
   gap: 1rem;
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -497,7 +585,7 @@ section {
 }
 
 .about-text {
-  font-size: 1.02rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   line-height: 1.9;
 }
@@ -540,7 +628,7 @@ section {
 
 .metric-val {
   font-family: var(--heading);
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--accent);
   display: block;
@@ -550,7 +638,7 @@ section {
 }
 
 .metric-label {
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   line-height: 1.45;
   position: relative;
@@ -564,7 +652,7 @@ section {
 }
 
 .tag {
-  font-size: 0.82rem;
+  font-size: 1.15rem;
   font-weight: 500;
   padding: 0.45rem 1.1rem;
   border: 1px solid var(--border-light);
@@ -580,6 +668,22 @@ section {
   background: var(--accent-glow);
 }
 
+/* ─── Uniform colored tags ─── */
+.tags-grid .tag,
+.cert-grid .tag,
+.tags-wrap .tag {
+  color: var(--tag-text);
+  background: var(--accent-glow);
+  border-color: var(--hover-accent-border, rgba(199,91,58,0.3));
+}
+
+.tags-grid .tag:hover,
+.cert-grid .tag:hover,
+.tags-wrap .tag:hover {
+  background: var(--accent-glow-strong);
+  transform: translateY(-1px);
+}
+
 .about-sub {
   margin-top: 3rem;
   padding-top: 2.5rem;
@@ -587,15 +691,34 @@ section {
 }
 
 .about-sub p {
-  font-size: 1.02rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   line-height: 1.85;
   margin-bottom: 1.5rem;
 }
 
+.looking-for-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+.looking-for-left p {
+  margin-bottom: 0;
+}
+.looking-for-right .tags-grid {
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .looking-for-split {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 .about-skills-label {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-muted);
   letter-spacing: 0.15em;
@@ -610,7 +733,7 @@ section {
 
 .filter-btn {
   font-family: var(--sans);
-  font-size: 0.78rem;
+  font-size: 1.25rem;
   font-weight: 500;
   padding: 0.55rem 1.25rem;
   border: 1px solid var(--border);
@@ -630,7 +753,7 @@ section {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.25rem;
 }
 
@@ -647,6 +770,13 @@ section {
   box-shadow: var(--shadow-sm);
 }
 
+.project-card.card-warm   { background: var(--card-warm);   border-color: var(--card-warm-border); }
+.project-card.card-cool   { background: var(--card-cool);   border-color: var(--card-cool-border); }
+.project-card.card-muted  { background: var(--card-muted);  border-color: var(--card-muted-border); }
+.project-card.card-earth  { background: var(--card-earth);  border-color: var(--card-earth-border); }
+.project-card.card-rose   { background: var(--card-rose);   border-color: var(--card-rose-border); }
+.project-card.card-indigo { background: var(--card-indigo); border-color: var(--card-indigo-border); }
+
 .project-card:hover {
   border-color: var(--hover-accent-border);
   transform: translateY(-6px);
@@ -654,23 +784,106 @@ section {
 }
 
 .project-thumb {
-  height: 200px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s var(--transition), opacity 0.4s;
+  z-index: 1;
+}
+
+.project-card:hover .project-thumb-img {
+  transform: scale(1.05);
+}
+
+/* Fallback when image fails to load */
+.project-thumb-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  z-index: 0;
+}
+
+.project-thumb-fallback-icon {
+  opacity: 0.7;
+  transition: transform 0.45s var(--transition);
+}
+
+.project-card:hover .project-thumb-fallback-icon {
+  transform: scale(1.1);
+}
+
+.project-thumb-fallback-title {
+  font-family: var(--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  opacity: 0.8;
+}
+
+.project-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.08) 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .project-body { padding: 1.5rem 1.75rem; }
 
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
 .project-tag {
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--accent);
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 0.6rem;
   display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--bg-raised);
+  transition: all 0.3s;
+}
+
+.project-tag.tag-casestudy       { color: var(--tag-casestudy);     background: var(--tag-casestudy-bg);     border-color: var(--tag-casestudy-border); }
+.project-tag.tag-financial       { color: var(--tag-financial);     background: var(--tag-financial-bg);     border-color: var(--tag-financial-border); }
+.project-tag.tag-product         { color: var(--tag-product);       background: var(--tag-product-bg);       border-color: var(--tag-product-border); }
+.project-tag.tag-market          { color: var(--tag-market);        background: var(--tag-market-bg);        border-color: var(--tag-market-border); }
+.project-tag.tag-strategy        { color: var(--tag-strategy);      background: var(--tag-strategy-bg);      border-color: var(--tag-strategy-border); }
+.project-tag.tag-competitive     { color: var(--tag-competitive);   background: var(--tag-competitive-bg);   border-color: var(--tag-competitive-border); }
+.project-tag.tag-consumer        { color: var(--tag-consumer);      background: var(--tag-consumer-bg);      border-color: var(--tag-consumer-border); }
+.project-tag.tag-guesstimate     { color: var(--tag-guesstimate);   background: var(--tag-guesstimate-bg);   border-color: var(--tag-guesstimate-border); }
+.project-tag.tag-sustainability  { color: var(--tag-sustainability);background: var(--tag-sustainability-bg); border-color: var(--tag-sustainability-border); }
+
+.project-tag:hover {
+  filter: brightness(1.15);
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
 }
 
 .project-title {
@@ -682,18 +895,18 @@ section {
   letter-spacing: -0.01em;
 }
 
-.project-summary { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
+.project-summary { font-size: 1.15rem; color: var(--text-muted); line-height: 1.65; }
 
 .project-footer {
   padding: 1rem 1.75rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(128,128,128,0.12);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.project-tools { font-size: 0.82rem; color: var(--text-muted); }
-.project-arrow { color: var(--accent); font-size: 1rem; transition: transform 0.3s; }
+.project-tools { font-size: 1.15rem; color: var(--text-muted); }
+.project-arrow { color: var(--accent); font-size: 1.15rem; transition: transform 0.3s; }
 .project-card:hover .project-arrow { transform: translateX(5px); }
 
 .projects-empty, .blog-empty {
@@ -701,7 +914,7 @@ section {
   text-align: center;
   padding: 4rem 2rem;
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 1.25rem;
   border: 1.5px dashed var(--border-light);
   border-radius: var(--radius);
   background: var(--bg-card);
@@ -745,18 +958,18 @@ section {
 
 .edu-degree {
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
   letter-spacing: -0.01em;
 }
 
-.edu-inst { font-size: 0.88rem; color: var(--text-muted); }
+.edu-inst { font-size: 1.25rem; color: var(--text-muted); }
 .edu-right { text-align: right; flex-shrink: 0; }
 
 .edu-score {
   font-family: var(--heading);
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   font-weight: 800;
   color: var(--accent);
   letter-spacing: -0.02em;
@@ -764,7 +977,7 @@ section {
 
 .edu-year {
   font-family: var(--mono);
-  font-size: 0.68rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
   letter-spacing: 0.05em;
 }
@@ -811,14 +1024,14 @@ section {
 
 .exp-role {
   font-family: var(--sans);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.01em;
 }
 
 .exp-date {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-muted);
   flex-shrink: 0;
@@ -829,13 +1042,13 @@ section {
 }
 
 .exp-org {
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
 }
 
 .exp-desc {
-  font-size: 0.95rem;
+  font-size: 1.25rem;
   color: var(--text-secondary);
   line-height: 1.8;
 }
@@ -874,12 +1087,12 @@ section {
 
 .leader-role {
   font-family: var(--sans);
-  font-size: 0.98rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
 }
 
-.leader-org { font-size: 0.85rem; color: var(--text-muted); }
+.leader-org { font-size: 1.25rem; color: var(--text-muted); }
 
 /* ─── COURSES ─── */
 .courses-list { display: flex; flex-direction: column; gap: 0; }
@@ -903,7 +1116,7 @@ section {
 
 .course-domain {
   font-family: var(--sans);
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   font-weight: 600;
   min-width: 150px;
   flex-shrink: 0;
@@ -911,7 +1124,7 @@ section {
 }
 
 .course-names {
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
@@ -947,7 +1160,7 @@ section {
 
 .blog-date {
   font-family: var(--mono);
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-muted);
   letter-spacing: 0.1em;
@@ -956,19 +1169,19 @@ section {
 
 .blog-title {
   font-family: var(--heading);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 0.6rem;
   line-height: 1.3;
   letter-spacing: -0.01em;
 }
 
-.blog-preview { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
+.blog-preview { font-size: 1.15rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 1rem; }
 
 .blog-footer { display: flex; justify-content: space-between; align-items: center; }
 
 .blog-category {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   font-weight: 500;
   padding: 0.3rem 0.8rem;
   border: 1px solid var(--border);
@@ -976,7 +1189,7 @@ section {
   border-radius: 100px;
 }
 
-.blog-read { font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+.blog-read { font-size: 1.25rem; color: var(--accent); font-weight: 600; }
 
 /* ─── CONTACT ─── */
 .contact-section {
@@ -998,7 +1211,7 @@ section {
   filter: blur(40px);
 }
 
-.contact-section .section-title { font-size: clamp(2.2rem, 4.5vw, 3.8rem); }
+.contact-section .section-title { font-size: clamp(2.5rem, 5vw, 4.4rem); }
 .contact-section .section-desc { margin: 0 auto 2.5rem; text-align: center; }
 
 .contact-grid {
@@ -1059,7 +1272,7 @@ section {
 }
 
 .contact-card-label {
-  font-size: 0.7rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: var(--text-muted);
   margin-bottom: 0.1rem;
@@ -1067,26 +1280,26 @@ section {
   letter-spacing: 0.06em;
 }
 
-.contact-card-value { font-size: 0.88rem; font-weight: 500; color: var(--text); }
+.contact-card-value { font-size: 1.25rem; font-weight: 500; color: var(--text); }
 
 .contact-ctas { display: flex; gap: 0.8rem; justify-content: center; }
 
 /* ─── FOOTER ─── */
 footer {
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 2rem 4rem;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.82rem;
+  font-size: 1.15rem;
   color: var(--text-muted);
 }
 
 footer span:last-child {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 1.15rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
@@ -1153,6 +1366,7 @@ footer span:last-child {
   .hero { padding: 5.5rem 2.5rem 5rem; }
   nav { padding: 0 2rem; }
   footer { padding: 1.5rem 2.5rem; }
+  .projects-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
@@ -1178,13 +1392,14 @@ footer span:last-child {
 
   .theme-toggle { margin-left: 0.75rem; }
 
-  .hero h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
-  .hero-desc { font-size: 1.02rem; }
-  .hero-oneliner { font-size: 1.05rem; }
+  .hero h1 { font-size: clamp(2.75rem, 10vw, 4rem); }
+  .hero-desc { font-size: 1.25rem; }
+  .hero-oneliner { font-size: 1.2rem; }
   .about-split { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-metrics { position: static; }
   .edu-grid, .leader-grid, .contact-grid { grid-template-columns: 1fr; }
-  .projects-grid, .blog-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .blog-grid { grid-template-columns: 1fr; }
   .course-row { flex-direction: column; gap: 0.25rem; }
   .course-domain { min-width: auto; }
   .exp-top { flex-direction: column; gap: 0.2rem; }
@@ -1193,6 +1408,144 @@ footer span:last-child {
   .hero-scroll { display: none; }
   .hero-orb { display: none; }
   .section-label::before { display: none; }
+}
+
+/* ─── PDF PREVIEW MODAL ─── */
+.pdf-modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 10000;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: modalFadeIn 0.25s ease;
+}
+.pdf-modal-overlay.active { display: flex; }
+@keyframes modalFadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.pdf-modal {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 90vh;
+  background: var(--bg-raised, #1A1A1E);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  animation: modalSlideUp 0.3s ease;
+}
+@keyframes modalSlideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border, #2A2A30);
+  background: var(--bg-card, #1E1E23);
+  flex-shrink: 0;
+}
+.pdf-modal-title {
+  font-family: var(--sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 16px;
+}
+.pdf-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.pdf-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  border: 1px solid var(--border, #2A2A30);
+  background: var(--bg, #131316);
+  color: var(--text-secondary);
+}
+.pdf-modal-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.pdf-modal-close {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  line-height: 1;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.pdf-modal-close:hover {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+
+.pdf-modal-body {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.pdf-modal-body iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.pdf-modal-loading {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--text-muted);
+  font-family: var(--sans);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.pdf-modal-spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 768px) {
+  .pdf-modal-overlay { padding: 8px; }
+  .pdf-modal { height: 95vh; border-radius: 12px; }
+  .pdf-modal-header { padding: 12px 16px; }
+  .pdf-modal-title { font-size: 0.95rem; }
+  .pdf-modal-btn span.btn-label { display: none; }
 }
 </style>
 </head>
@@ -1230,7 +1583,8 @@ footer span:last-child {
   <p class="hero-oneliner">"I operate at the intersection of technology and business."</p>
   <div class="hero-ctas">
     <a href="#work" class="btn btn-primary">Explore my work &rarr;</a>
-    <a href="#" class="btn btn-secondary">Download resume</a>
+    <a href="https://drive.google.com/file/d/1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6/preview" class="btn btn-secondary" target="_blank" rel="noopener">View resume</a>
+    <a href="https://drive.google.com/uc?export=download&id=1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6" class="btn btn-secondary" target="_blank" rel="noopener">Download resume</a>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -1280,15 +1634,21 @@ footer span:last-child {
   </div>
   <div class="about-sub">
     <div class="section-label">What I'm looking for</div>
-    <p>I'm seeking roles that value <strong>strategic thinking</strong>, <strong>analytical depth</strong>, and <strong>innovation-driven execution</strong> &mdash; where structured problem-solving, cross-functional collaboration, and comfort with ambiguity are essential. I want to contribute to <strong>meaningful, sustainable progress</strong> while continuously learning from diverse perspectives.</p>
-    <div class="tags-grid">
-      <span class="tag">Management Consulting</span>
-      <span class="tag">Product Management</span>
-      <span class="tag">Business Analytics</span>
-      <span class="tag">Strategy &amp; Operations</span>
-      <span class="tag">Founder's Office</span>
-      <span class="tag">Design Thinking</span>
-      <span class="tag">Market Research</span>
+    <div class="looking-for-split">
+      <div class="looking-for-left">
+        <p>I'm seeking roles that value <strong>strategic thinking</strong>, <strong>analytical depth</strong>, and <strong>innovation-driven execution</strong> &mdash; where structured problem-solving, cross-functional collaboration, and comfort with ambiguity are essential. I want to contribute to <strong>meaningful, sustainable progress</strong> while continuously learning from diverse perspectives.</p>
+      </div>
+      <div class="looking-for-right">
+        <div class="tags-grid">
+          <span class="tag">Management Consulting</span>
+          <span class="tag">Product Management</span>
+          <span class="tag">Business Analytics</span>
+          <span class="tag">Strategy &amp; Operations</span>
+          <span class="tag">Founder's Office</span>
+          <span class="tag">Design Thinking</span>
+          <span class="tag">Market Research</span>
+        </div>
+      </div>
     </div>
   </div>
   <div class="about-sub">
@@ -1432,9 +1792,14 @@ footer span:last-child {
       <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
       <div><div class="contact-card-label">Personal email</div><div class="contact-card-value">yaswantkk0@gmail.com</div></div>
     </a>
+    <a href="https://github.com/yaswantkk18" class="contact-card" target="_blank">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></div>
+      <div><div class="contact-card-label">GitHub</div><div class="contact-card-value">github.com/yaswantkk18</div></div>
+    </a>
   </div>
   <div class="contact-ctas">
-    <a href="#" class="btn btn-primary">Download resume</a>
+    <a href="https://drive.google.com/file/d/1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6/preview" class="btn btn-primary" target="_blank" rel="noopener">View resume</a>
+    <a href="https://drive.google.com/uc?export=download&id=1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6" class="btn btn-primary" target="_blank" rel="noopener">Download resume</a>
     <a href="mailto:yaswantkk0@gmail.com" class="btn btn-secondary">Send me an email</a>
   </div>
 </section>
@@ -1470,7 +1835,86 @@ var SKILLS = [
 ];
 
 var PROJECTS = [
-  // { title: "Project Name", category: "Case Study", summary: "1-2 lines", tools: "Framework, Tool", link: "#", bg: "bg-warm" },
+  {
+    title: "BluSmart Profitability Case Study",
+    tags: ["Case Study", "Financial Analysis"],
+    thumb: "https://docs.google.com/presentation/d/1DmAm0jln2FLBTAtayPk8sbt6nk-K8Rkm/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="8" y="32" width="8" height="16" rx="2" fill="currentColor" opacity="0.5"/><rect x="20" y="24" width="8" height="24" rx="2" fill="currentColor" opacity="0.7"/><rect x="32" y="16" width="8" height="32" rx="2" fill="currentColor" opacity="0.85"/><path d="M10 30L24 18L36 22L48 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="48" cy="10" r="3" fill="currentColor"/></svg>',
+    summary: "Deep financial analysis of BluSmart's unit economics — revenue INR 390 Cr vs costs ~INR 860 Cr. MECE framework with breakeven bridge and 5 actionable recommendations.",
+    tools: "Financial Modelling, Unit Economics, MECE Framework",
+    link: "https://drive.google.com/file/d/1Fvb1vPPNmnu2AvpP1G-IzRAgRfoo4_1b/view?usp=sharing",
+    bg: "bg-warm"
+  },
+  {
+    title: "Cult.fit Maternal Fitness — Product Case Study",
+    tags: ["Case Study", "Product Strategy"],
+    thumb: "https://docs.google.com/presentation/d/1u-mCD1ecb8OgFX8NSzV9A4ncopc1bJ0M/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M16 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M28 28v8M24 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
+    summary: "Proposed a maternal/postpartum fitness feature for Cult.fit targeting an underserved segment. Includes user personas, pain-point scoring, and North Star metrics.",
+    tools: "Product Strategy, Design Thinking, User Research",
+    link: "https://drive.google.com/file/d/1BTPzHUNDeiLUllCk6Cam3d5i2N3HtV0j/view?usp=sharing",
+    bg: "bg-rose"
+  },
+  {
+    title: "EV Charging — PESTEL Analysis",
+    tags: ["Market Research", "Strategy"],
+    thumb: "https://docs.google.com/presentation/d/18Cr3spTduC2HvdDOFDi1J58ku5lVxKIT/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><rect x="12" y="8" width="32" height="40" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M20 18h16M20 24h16M20 30h10" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.7"/><circle cx="38" cy="38" r="8" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/><path d="M35 38l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    summary: "Comprehensive PESTEL analysis of India's EV charging sector covering FAME schemes, $110.7B market projection, charging standards, and regulatory frameworks.",
+    tools: "PESTEL Framework, Market Research, Data Analytics",
+    link: "https://drive.google.com/file/d/1zOPoyTLmBNTH619Ng5QroGJCfL9Lcbjn/view?usp=sharing",
+    bg: "bg-cool"
+  },
+  {
+    title: "EV Charging — Porter's Five Forces",
+    tags: ["Market Research", "Competitive Analysis"],
+    thumb: "https://docs.google.com/presentation/d/19FYL6xgyCY7G234Z3vaYer78J6lT-tEm/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="6" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="10" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="46" cy="22" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="40" cy="42" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="16" cy="42" r="4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="10" cy="22" r="4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="28" y1="14" x2="28" y2="22" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="42" y1="24" x2="34" y2="26" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="38" y1="39" x2="32" y2="33" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="18" y1="39" x2="24" y2="33" stroke="currentColor" stroke-width="1.5" opacity="0.5"/><line x1="14" y1="24" x2="22" y2="26" stroke="currentColor" stroke-width="1.5" opacity="0.5"/></svg>',
+    summary: "Five Forces analysis of the Indian EV charging market — from Tata Power's ~50% dominance to battery swapping as a substitute and oligopolistic rivalry.",
+    tools: "Porter's Five Forces, Competitive Analysis, Strategy",
+    link: "https://drive.google.com/file/d/1Kr8JTwn04DVy5MMdznoiwQTyivMNdNwq/view?usp=sharing",
+    bg: "bg-indigo"
+  },
+  {
+    title: "EV Charging — Need, Want & Demand",
+    tags: ["Market Research", "Consumer Insights"],
+    thumb: "https://docs.google.com/presentation/d/1RQ5LYZjmbp2kEcsFY-3br6_guYoYJYV0/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="2" fill="none" opacity="0.3"/><circle cx="28" cy="28" r="12" stroke="currentColor" stroke-width="2" fill="none" opacity="0.5"/><circle cx="28" cy="28" r="6" stroke="currentColor" stroke-width="2.5" fill="currentColor" opacity="0.7"/><path d="M28 6v4M28 46v4M6 28h4M46 28h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/></svg>',
+    summary: "Consumer needs analysis based on ~50 EV owner interviews. Maps needs, wants, and demands — from fast DC charging under 30 min to pet-friendly waiting areas.",
+    tools: "Qualitative Research, Consumer Insights, Interviews",
+    link: "https://drive.google.com/file/d/1aCch4wv64_iwjTVaTGIFSmZRBuv0JNja/view?usp=sharing",
+    bg: "bg-earth"
+  },
+  {
+    title: "Blueberry Market Estimation — Hyderabad",
+    tags: ["Guesstimate", "Market Research"],
+    thumb: "https://docs.google.com/presentation/d/1UySCHHPXscjA_WEBI_uHEygZahLIp9Lt/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="22" cy="30" r="9" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="2"/><circle cx="34" cy="26" r="9" fill="currentColor" opacity="0.35" stroke="currentColor" stroke-width="2"/><circle cx="28" cy="36" r="9" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="2"/><path d="M26 14c2-4 6-4 8 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M30 14v-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+    summary: "Bottom-up market sizing for blueberry sales in Hyderabad — ~118 tonnes/year across household, HoReCa, and institutional segments with channel split analysis.",
+    tools: "Guesstimation, Market Sizing, Data Analytics",
+    link: "https://drive.google.com/file/d/1GOxXJe-Qxf6VhKrXBT9YWiKWhy47mas4/view?usp=sharing",
+    bg: "bg-muted"
+  },
+  {
+    title: "Avocado Market Estimation — Hyderabad",
+    tags: ["Guesstimate", "Market Research"],
+    thumb: "https://docs.google.com/presentation/d/1vOGEBkmkAXN7QVk7jcB8cO_8Xrvb8CMx/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><ellipse cx="28" cy="30" rx="14" ry="18" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="2.5"/><ellipse cx="28" cy="33" rx="6" ry="7" fill="currentColor" opacity="0.4"/><path d="M28 12c-2-4-1-8 2-8s4 4 2 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>',
+    summary: "Market estimation for avocado sales in Hyderabad — ~640 tonnes/year. Covers import dynamics (Tanzania 80-86%), channel mix (63% offline), and segment breakdowns.",
+    tools: "Guesstimation, Market Sizing, Import Analysis",
+    link: "https://drive.google.com/file/d/1BVyb8_ryx8rBxI8BSHHLc-O4_BCTbYOj/view?usp=sharing",
+    bg: "bg-earth"
+  },
+  {
+    title: "IIT Hyderabad Energy Savings Guesstimate",
+    tags: ["Guesstimate", "Sustainability"],
+    thumb: "https://docs.google.com/presentation/d/1qCGEKaXgMxlUSZU08Eix0ZiIgKVyhqoh/export/png",
+    icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M28 8L18 28h8l-4 20 16-24h-9l5-16z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>',
+    summary: "Engineering guesstimate on radiant cooling and auto-lighting at IITH — saving 7,557 MWh/year, INR 5.29 Cr/year, and ~6,801 tonnes CO\u2082e (equivalent to 310K trees).",
+    tools: "Guesstimation, Sustainability Analysis, Engineering",
+    link: "https://drive.google.com/file/d/1_7MgPQmudR6gRD_HdnVnRV9yjpqy-KIH/view?usp=sharing",
+    bg: "bg-cool"
+  }
 ];
 
 var BLOG_POSTS = [
@@ -1481,24 +1925,34 @@ var BLOG_POSTS = [
 
 function renderSkills() {
   var g = document.getElementById('skillsGrid');
-  if (!SKILLS.length) { g.innerHTML = '<span style="font-size:0.85rem;color:var(--text-muted);font-style:italic;">Add skills to the SKILLS array to display them here.</span>'; return; }
+  if (!SKILLS.length) { g.innerHTML = '<span style="font-size:1rem;color:var(--text-muted);font-style:italic;">Add skills to the SKILLS array to display them here.</span>'; return; }
   g.innerHTML = SKILLS.map(function(s) { return '<span class="tag">' + s + '</span>'; }).join('');
 }
 
 function renderProjects(filter) {
   var g = document.getElementById('projectsGrid');
-  var f = filter === 'All' ? PROJECTS : PROJECTS.filter(function(p) { return p.category === filter; });
+  var f = filter === 'All' ? PROJECTS.slice() : PROJECTS.filter(function(p) { return p.tags && p.tags.indexOf(filter) !== -1; });
+  f.sort(function(a, b) { return a.title.localeCompare(b.title); });
   if (!PROJECTS.length) { g.innerHTML = '<div class="projects-empty">Projects will appear here once added.<br>Edit the PROJECTS array in the HTML to add your work.</div>'; return; }
   if (!f.length) { g.innerHTML = '<div class="projects-empty">No projects in this category yet.</div>'; return; }
   g.innerHTML = f.map(function(p) {
-    return '<a href="' + (p.link||'#') + '" class="project-card"><div class="project-thumb ' + (p.bg||'bg-muted') + '"></div><div class="project-body"><span class="project-tag">' + p.category + '</span><div class="project-title">' + p.title + '</div><div class="project-summary">' + p.summary + '</div></div><div class="project-footer"><span class="project-tools">' + p.tools + '</span><span class="project-arrow">&rarr;</span></div></a>';
+    var tagColorMap = { 'Case Study': 'tag-casestudy', 'Financial Analysis': 'tag-financial', 'Product Strategy': 'tag-product', 'Market Research': 'tag-market', 'Strategy': 'tag-strategy', 'Competitive Analysis': 'tag-competitive', 'Consumer Insights': 'tag-consumer', 'Guesstimate': 'tag-guesstimate', 'Sustainability': 'tag-sustainability' };
+    var tagsHtml = (p.tags || []).map(function(t) { return '<span class="project-tag ' + (tagColorMap[t]||'') + '">' + t + '</span>'; }).join('');
+    var fallbackHtml = '<div class="project-thumb-fallback">' + (p.icon ? '<div class="project-thumb-fallback-icon">' + p.icon + '</div>' : '') + '<div class="project-thumb-fallback-title">' + p.title + '</div></div>';
+    var imgHtml = p.thumb ? '<img class="project-thumb-img" src="' + p.thumb + '" alt="' + p.title + '" loading="lazy" onerror="this.style.display=\'none\'">' : '';
+    var cardColor = (p.bg||'bg-muted').replace('bg-', 'card-');
+    var escapedTitle = p.title.replace(/'/g, "\\'");
+    var escapedLink = (p.link||'#').replace(/'/g, "\\'");
+    return '<div class="project-card ' + cardColor + '" onclick="openPdfModal(\'' + escapedLink + '\', \'' + escapedTitle + '\')" style="cursor:pointer;"><div class="project-thumb ' + (p.bg||'bg-muted') + '">' + fallbackHtml + imgHtml + '</div><div class="project-body"><div class="project-tags">' + tagsHtml + '</div><div class="project-title">' + p.title + '</div><div class="project-summary">' + p.summary + '</div></div><div class="project-footer"><span class="project-tools">' + p.tools + '</span><span class="project-arrow">&rarr;</span></div></div>';
   }).join('');
 }
 
 function renderFilters() {
   var b = document.getElementById('filterBar');
   if (!PROJECTS.length) { b.innerHTML = ''; return; }
-  var cats = ['All'].concat([...new Set(PROJECTS.map(function(p) { return p.category; }))]);
+  var tagSet = new Set();
+  PROJECTS.forEach(function(p) { (p.tags || []).forEach(function(t) { tagSet.add(t); }); });
+  var cats = ['All'].concat([...tagSet]);
   b.innerHTML = cats.map(function(c, i) {
     return '<button class="filter-btn' + (i===0?' active':'') + '" onclick="setFilter(\'' + c + '\',this)">' + c + '</button>';
   }).join('');
@@ -1587,6 +2041,76 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+/* ═══ PDF PREVIEW MODAL ═══ */
+
+function openPdfModal(link, title) {
+  var overlay = document.getElementById('pdfModalOverlay');
+  var titleEl = document.getElementById('pdfModalTitle');
+  var iframe = document.getElementById('pdfModalIframe');
+  var openBtn = document.getElementById('pdfModalOpen');
+  var loading = document.getElementById('pdfModalLoading');
+
+  // Convert Google Drive view URL to embeddable preview URL
+  var embedUrl = link.replace('/view?', '/preview?');
+
+  titleEl.textContent = title;
+  openBtn.href = link;
+  iframe.src = '';
+  loading.style.display = 'flex';
+  iframe.style.opacity = '0';
+
+  overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+
+  iframe.src = embedUrl;
+  iframe.onload = function() {
+    loading.style.display = 'none';
+    iframe.style.opacity = '1';
+  };
+}
+
+function closePdfModal() {
+  var overlay = document.getElementById('pdfModalOverlay');
+  var iframe = document.getElementById('pdfModalIframe');
+  overlay.classList.remove('active');
+  document.body.style.overflow = '';
+  iframe.src = '';
+}
+
+// Close on overlay click (not modal itself)
+document.getElementById('pdfModalOverlay').addEventListener('click', function(e) {
+  if (e.target === this) closePdfModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closePdfModal();
+});
+
 </script>
+
+<!-- PDF Preview Modal -->
+<div class="pdf-modal-overlay" id="pdfModalOverlay">
+  <div class="pdf-modal">
+    <div class="pdf-modal-header">
+      <div class="pdf-modal-title" id="pdfModalTitle"></div>
+      <div class="pdf-modal-actions">
+        <a class="pdf-modal-btn" id="pdfModalOpen" href="#" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M6 3H3v10h10v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 2h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 2L7 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span class="btn-label">Open in New Tab</span>
+        </a>
+        <button class="pdf-modal-close" onclick="closePdfModal()" title="Close">&times;</button>
+      </div>
+    </div>
+    <div class="pdf-modal-body">
+      <div class="pdf-modal-loading" id="pdfModalLoading">
+        <div class="pdf-modal-spinner"></div>
+        Loading preview…
+      </div>
+      <iframe id="pdfModalIframe" allow="autoplay"></iframe>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
