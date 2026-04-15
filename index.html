@@ -458,6 +458,41 @@ section {
 
 .hero > *:not(.hero-orb) { position: relative; z-index: 1; }
 
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-text {
+  flex: 0 1 55%;
+}
+
+.hero-photo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: slideUp 0.9s var(--transition) 0.5s forwards;
+}
+
+.hero-photo-inner {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--accent);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1) translateY(5%);
+}
+
 .hero-topline {
   font-family: var(--mono);
   font-size: 1.25rem;
@@ -1413,6 +1448,8 @@ footer span:last-child {
   .course-domain { min-width: auto; }
   .exp-top { flex-direction: column; gap: 0.2rem; }
   .contact-ctas { flex-direction: column; align-items: center; }
+  .hero-content { flex-direction: column-reverse; gap: 2rem; align-items: flex-start; }
+  .hero-photo img { width: 180px; height: 180px; }
   .hero-ctas { flex-direction: column; align-items: flex-start; }
   .hero-scroll { display: none; }
   .hero-orb { display: none; }
@@ -1586,14 +1623,23 @@ footer span:last-child {
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-orb hero-orb-3"></div>
 
-  <div class="hero-topline">Engineer &middot; Entrepreneur &middot; IIT Hyderabad '26</div>
-  <h1>Yaswant KK</h1>
-  <p class="hero-desc">I <strong>build things from zero</strong>. I break down <strong>complex problems</strong>, validate with <strong>data</strong>, and build things that make <strong>commercial sense</strong>.</p>
-  <p class="hero-oneliner">"I operate at the intersection of technology and business."</p>
-  <div class="hero-ctas">
-    <a href="#work" class="btn btn-primary">Explore my work &rarr;</a>
-    <a href="javascript:void(0)" class="btn btn-secondary" onclick="openPdfModal('https://drive.google.com/file/d/1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6/view?usp=sharing', 'Resume — Yaswant KK')">View resume</a>
-    <a href="https://drive.google.com/uc?export=download&id=1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6" class="btn btn-secondary" target="_blank" rel="noopener">Download resume</a>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-topline">Engineer &middot; Entrepreneur &middot; IIT Hyderabad '26</div>
+      <h1>Yaswant KK</h1>
+      <p class="hero-desc">I <strong>build things from zero</strong>. I break down <strong>complex problems</strong>, validate with <strong>data</strong>, and build things that make <strong>commercial sense</strong>.</p>
+      <p class="hero-oneliner">"I operate at the intersection of technology and business."</p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary">Explore my work &rarr;</a>
+        <a href="javascript:void(0)" class="btn btn-secondary" onclick="openPdfModal('https://drive.google.com/file/d/1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6/view?usp=sharing', 'Resume — Yaswant KK')">View resume</a>
+        <a href="https://drive.google.com/uc?export=download&id=1hi3Il9s1tOM6aXnBlCWtrAxMDAVT2uW6" class="btn btn-secondary" target="_blank" rel="noopener">Download resume</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="hero-photo-inner">
+        <img src="https://drive.google.com/thumbnail?id=1gcifrQ6JtHnudALU18-bOglqojvosCAo&sz=w600" alt="Yaswant KK" />
+      </div>
+    </div>
   </div>
   <div class="hero-scroll">
     <div class="scroll-line"></div>
@@ -1857,7 +1903,7 @@ var PROJECTS = [
   {
     title: "Cult.fit Maternal Fitness — Product Case Study",
     tags: ["Case Study", "Product Strategy"],
-    thumb: "https://docs.google.com/presentation/d/1u-mCD1ecb8OgFX8NSzV9A4ncopc1bJ0M/export/png",
+    thumb: "https://docs.google.com/presentation/d/1qCGEKaXgMxlUSZU08Eix0ZiIgKVyhqoh/export/png",
     icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><circle cx="28" cy="20" r="8" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M16 44c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M28 28v8M24 32h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>',
     summary: "Proposed a maternal/postpartum fitness feature for Cult.fit targeting an underserved segment. Includes user personas, pain-point scoring, and North Star metrics.",
     tools: "Product Strategy, Design Thinking, User Research",
@@ -1917,7 +1963,7 @@ var PROJECTS = [
   {
     title: "IIT Hyderabad Energy Savings Guesstimate",
     tags: ["Guesstimate", "Sustainability"],
-    thumb: "https://docs.google.com/presentation/d/1qCGEKaXgMxlUSZU08Eix0ZiIgKVyhqoh/export/png",
+    thumb: "https://docs.google.com/presentation/d/1u-mCD1ecb8OgFX8NSzV9A4ncopc1bJ0M/export/png",
     icon: '<svg width="56" height="56" viewBox="0 0 56 56" fill="none"><path d="M28 8L18 28h8l-4 20 16-24h-9l5-16z" fill="currentColor" opacity="0.25" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/></svg>',
     summary: "Engineering guesstimate on radiant cooling and auto-lighting at IITH — saving 7,557 MWh/year, INR 5.29 Cr/year, and ~6,801 tonnes CO\u2082e (equivalent to 310K trees).",
     tools: "Guesstimation, Sustainability Analysis, Engineering",
@@ -1996,7 +2042,7 @@ function setFilter(cat, btn) {
 
 function renderBlog() {
   var g = document.getElementById('blogGrid');
-  if (!BLOG_POSTS.length) { g.innerHTML = '<div class="blog-empty">Blog posts will appear here once added.<br>Edit the BLOG_POSTS array in the HTML to share your thoughts.</div>'; return; }
+  if (!BLOG_POSTS.length) { g.innerHTML = '<div class="blog-empty">Blog posts will appear here once added.</div>'; return; }
   g.innerHTML = BLOG_POSTS.map(function(p) {
     return '<a href="' + (p.link||'#') + '" class="blog-card"><div class="blog-date">' + p.date + '</div><div class="blog-title">' + p.title + '</div><div class="blog-preview">' + p.preview + '</div><div class="blog-footer"><span class="blog-category">' + p.category + '</span><span class="blog-read">Read &rarr;</span></div></a>';
   }).join('');
